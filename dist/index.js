@@ -97,7 +97,7 @@
             i = t.n(u),
             c = t(2),
             a = t.n(c),
-            l = (function() {
+            f = (function() {
                 function e() {
                     var n = 0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : {};
                     i()(this, e);
@@ -109,17 +109,15 @@
                         {
                             key: 'log',
                             value: function() {
-                                for (var e, n = arguments.length, t = new Array(n), r = 0; r < n; r++)
-                                    t[r] = arguments[r];
-                                this.render(t, 'log'), (e = console).log.apply(e, t);
+                                for (var e = arguments.length, n = new Array(e), t = 0; t < e; t++) n[t] = arguments[t];
+                                this.render(n, 'log');
                             },
                         },
                         {
                             key: 'info',
                             value: function() {
-                                for (var e, n = arguments.length, t = new Array(n), r = 0; r < n; r++)
-                                    t[r] = arguments[r];
-                                this.render(t, 'info'), (e = console).info.apply(e, t);
+                                for (var e = arguments.length, n = new Array(e), t = 0; t < e; t++) n[t] = arguments[t];
+                                this.render(n, 'info');
                             },
                         },
                         {
@@ -145,20 +143,15 @@
                     e
                 );
             })();
-        function f(e) {
+        function l(e) {
             var n = document.querySelector(e) || document.body;
-            return new l({ target: n });
+            return new f({ target: n });
         }
-        t.d(n, 'console', function() {
-            return s;
-        }),
-            t.d(n, 'consoleFactory', function() {
-                return f;
-            });
-        var y = { consoleFactory: f };
+        t.d(n, 'consoleFactory', function() {
+            return l;
+        });
+        var y = { consoleFactory: l };
         window.WebConsole = y;
-        var s = f();
-        s.log('chk this', { abc: 'xyx' }, [1, 2, 3, 4, [5, 6]]);
     },
 ]);
 //# sourceMappingURL=index.js.map

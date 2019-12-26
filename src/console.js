@@ -5,13 +5,9 @@ class Console {
     }
     log(...args) {
         this.render(args, 'log');
-        // eslint-disable-next-line no-console
-        console.log(...args);
     }
     info(...args) {
         this.render(args, 'info');
-        // eslint-disable-next-line no-console
-        console.info(...args);
     }
 
     render(msgs, type) {
