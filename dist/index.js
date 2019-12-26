@@ -151,7 +151,7 @@
             return l;
         });
         var y = { consoleFactory: l };
-        window.WebConsole = y;
+        (window.console = l()), (window.WebConsole = y);
     },
 ]);
 //# sourceMappingURL=index.js.map
